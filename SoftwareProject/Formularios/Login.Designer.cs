@@ -89,6 +89,7 @@
             this.txtPassword.Size = new System.Drawing.Size(408, 25);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 

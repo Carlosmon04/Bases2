@@ -15,9 +15,12 @@ namespace SoftwareProject.Formularios
     public partial class VentaArticulo : Form
     {
         private SqlConnection cnx;
-        private int userID,Index;
+        private int userID, Index;
 
         string Articulo, PrecioBase;
+
+        private Dictionary<int, string> map = new Dictionary<int, string>();
+
 
         SqlCommand cmd;
         SqlCommand cmd2;
@@ -33,13 +36,57 @@ namespace SoftwareProject.Formularios
         public VentaArticulo(SqlConnection conexion, int usuario)
         {
             InitializeComponent();
+            
             cnx = conexion;
             userID = usuario;
+            CargarDatos();
+            FiltrarYAsignarDatos();
+        }
+
+        private void CargarDatos( )
+        {
+            string url = "Server= 3.128.144.165;" +
+                             "DataBase= DB20222000953;" +
+                             "User ID= david.rodriguez;" +
+                             "password= DR20222000953;";
+
+
+            using (SqlConnection cnx= new SqlConnection(url))
+            {
+                SqlCommand cmd = new SqlCommand("select * from vInventarioTodos",cnx);
+                
+                cnx.Open();
+                SqlDataReader data = cmd.ExecuteReader();
+
+                int index = 0;
+                while (data.Read())
+                {
+                    
+                    map.Add(index, data["Articulo"].ToString());
+                    index++;
+                }
+                data.Close();
+            }
+        }
+        private void FiltrarYAsignarDatos()
+        {
+            // Ejemplo: ocultar el ítem en el índice 1
+            List<int> indicesAExcluir = new List<int> { 1,2 ,3};
+            var indicesVisibles = map.Where(x => !indicesAExcluir.Contains(x.Key)).ToDictionary(x => x.Key, x => x.Value);
+
+            // Asignar los valores filtrados al ListBox
+            listBox1.DataSource = new BindingSource(indicesVisibles, null);
+            listBox1.DisplayMember = "Value";  // Lo que se muestra en el ListBox
+            listBox1.ValueMember = "Key";      // El índice original
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listBox1.SelectedItem != null)
+            {
+                var itemSeleccionado = (KeyValuePair<int, string>)listBox1.SelectedItem;
+                int indiceOriginal = itemSeleccionado.Key;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,28 +94,25 @@ namespace SoftwareProject.Formularios
             Dispose();
         }
 
+
+
         private void VentaArticulo_Load(object sender, EventArgs e)
         {
-               
+            //cmd = new SqlCommand("vInventarioTodos", cnx);
+            //cmd.CommandType = CommandType.StoredProcedure;
+            //data = cmd.ExecuteReader();
 
-            cmd = new SqlCommand("select * from vInventario", cnx);
-            data = cmd.ExecuteReader();
 
-            if (data.HasRows)
-            {
-                while (data.Read())
-                {
-                    this.listBox1.Items.Add(data.GetString(1));
-                }
-                data.Close();
-            }
         }
-        private void button1_Click(object sender, EventArgs e)
+
+
+
+    private void button1_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex > -1)
             {
                 Index=listBox1.SelectedIndex +1;
-                cmd = new SqlCommand("spMostrarDetaArt", cnx);
+                cmd = new SqlCommand("spMostrarDetaArt1", cnx);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ArticuloId", listBox1.SelectedIndex+1);
                 data1 = cmd.ExecuteReader();

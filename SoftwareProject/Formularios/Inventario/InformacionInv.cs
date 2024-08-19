@@ -39,7 +39,7 @@ namespace SoftwareProject.Formularios.Inventario
             {
                 cmd = new SqlCommand("spInventario", cnx) ;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ArticuloID", 0);
+                cmd.Parameters.AddWithValue("@articulolId", 0);
 
             }
             catch (SqlException ex)

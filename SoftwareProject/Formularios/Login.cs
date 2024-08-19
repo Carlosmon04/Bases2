@@ -177,5 +177,10 @@ namespace SoftwareProject.Formularios
                 txtPassword.Text = "Password";
             }
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
