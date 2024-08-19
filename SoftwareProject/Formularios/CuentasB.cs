@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,16 @@ namespace SoftwareProject.Formularios
 {
     public partial class CuentasB : Form
     {
-        public CuentasB()
+        private SqlConnection cnx;
+        public CuentasB(SqlConnection conexion)
         {
             InitializeComponent();
+            cnx=conexion;
+        }
+
+        private void CuentasB_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

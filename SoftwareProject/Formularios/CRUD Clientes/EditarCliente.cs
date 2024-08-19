@@ -176,7 +176,7 @@ namespace SoftwareProject.Formularios.CRUD_Clientes
         private void btnSalir_Click(object sender, EventArgs e)
         {
             
-            this.Dispose();
+            this.Close();
         }
 
         private void cmxPaquete_SelectedIndexChanged(object sender, EventArgs e)

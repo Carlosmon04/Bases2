@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Actividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Actividad.Designer.cs">
+      <DependentUpon>Actividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AsignarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="Formularios\CRUD Clientes\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CuentasB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CuentasB.Designer.cs">
+      <DependentUpon>CuentasB.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\DetalleArtVenta.cs">
       <SubType>Form</SubType>
@@ -213,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CRUD Clientes\EditarCliente.resx">
       <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CuentasB.resx">
+      <DependentUpon>CuentasB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\DetalleArtVenta.resx">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>

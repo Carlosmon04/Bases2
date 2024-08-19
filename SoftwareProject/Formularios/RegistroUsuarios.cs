@@ -36,7 +36,7 @@ namespace SoftwareProject.Formularios
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.FormClosed += new FormClosedEventHandler(RegistroUsuarios_btnCerrar);
-            this.Dispose();
+            this.Close();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace SoftwareProject.Formularios
         {
             Login login = new Login();
             login.Show();
-            this.Dispose();
+            this.Close();
         }
 
         private void btnJefes_Click(object sender, EventArgs e)

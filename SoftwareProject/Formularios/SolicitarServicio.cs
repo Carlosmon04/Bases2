@@ -99,7 +99,7 @@ namespace SoftwareProject.Formularios
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void btnConfirmarFecha_Click(object sender, EventArgs e)

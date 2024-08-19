@@ -311,7 +311,7 @@ namespace SoftwareProject
         private void btnCuentas_Click(object sender, EventArgs e)
         {
             Ocultar();
-            CuentasB cb = new CuentasB();
+            CuentasB cb = new CuentasB(cnx);
             cb.Visible = true;
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace SoftwareProject.Formularios
 {
     public partial class Actividad : Form
     {
-        public Actividad()
+        private SqlConnection cnx;
+        private int UserID;
+        public Actividad(SqlConnection conexion , int usuario)
         {
             InitializeComponent();
+            cnx = conexion;
+            UserID = usuario;
         }
     }
 }
