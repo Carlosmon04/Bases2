@@ -89,6 +89,12 @@
     <Compile Include="Formularios\CRUD Clientes\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\DetalleArtVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\DetalleArtVenta.Designer.cs">
+      <DependentUpon>DetalleArtVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Empleados\EditarEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,12 @@
     <Compile Include="Formularios\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\VentaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\VentaArticulo.Designer.cs">
+      <DependentUpon>VentaArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\VerPaquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +214,9 @@
     <EmbeddedResource Include="Formularios\CRUD Clientes\EditarCliente.resx">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\DetalleArtVenta.resx">
+      <DependentUpon>DetalleArtVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\EditarEmpleados.resx">
       <DependentUpon>EditarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VentaArticulo.resx">
+      <DependentUpon>VentaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerSolicitudes.resx">
       <DependentUpon>VerSolicitudes.cs</DependentUpon>

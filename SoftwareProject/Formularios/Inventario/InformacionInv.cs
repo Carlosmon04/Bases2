@@ -18,6 +18,8 @@ namespace SoftwareProject.Formularios.Inventario
 
         CompraArtExistente frm;
 
+        SqlCommand cmd;
+
         DataTable TabInventario;
         public InformacionInv(SqlConnection conexion,int usuario)
         {
@@ -33,6 +35,18 @@ namespace SoftwareProject.Formularios.Inventario
 
         private void InformacionInv_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cmd = new SqlCommand("spInventario", cnx) ;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ArticuloID", 0);
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Ocurrio un Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             try
             {
                 TabInventario = new DataTable();

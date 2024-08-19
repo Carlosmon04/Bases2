@@ -77,5 +77,10 @@ namespace SoftwareProject.Formularios
         {
 
         }
+
+        private void txtArticulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

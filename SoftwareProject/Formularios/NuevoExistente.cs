@@ -43,5 +43,10 @@ namespace SoftwareProject.Formularios
         {
 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

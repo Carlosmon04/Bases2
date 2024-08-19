@@ -110,6 +110,7 @@
             this.txtArticulo.Name = "txtArticulo";
             this.txtArticulo.Size = new System.Drawing.Size(147, 22);
             this.txtArticulo.TabIndex = 7;
+            this.txtArticulo.TextChanged += new System.EventHandler(this.txtArticulo_TextChanged);
             // 
             // txtMedida
             // 
