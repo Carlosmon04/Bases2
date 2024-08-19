@@ -242,7 +242,7 @@ namespace SoftwareProject
 
         private void btnAgregarS_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new El formulario que van a llamar por ejemplo infoPaquetes(cnx));
+            OpenChildForm(new CrearServicios(cnx, userID));
             Ocultar();
         }
 
