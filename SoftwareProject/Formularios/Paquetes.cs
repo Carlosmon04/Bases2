@@ -21,7 +21,7 @@ namespace SoftwareProject.Formularios
         private String Nombre;
         private int Id,Horas;
         private float Precio;
-        private int Cliente;
+        private int Cliente, Usuario;
 
 
         private void Paquetes_Load(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace SoftwareProject.Formularios
             txtPrecio.Text = Precio.ToString();
         }
 
-        public Paquetes(SqlConnection conexion, int id, String nombre, float precio, int horas )
+        public Paquetes(SqlConnection conexion, int cliente,int id, String nombre, float precio, int horas, int UsuarioID )
         {
             InitializeComponent();
             cnx = conexion;
@@ -41,6 +41,7 @@ namespace SoftwareProject.Formularios
             Id = id;
             Precio = precio;
             Horas = horas;
+            Usuario = UsuarioID;
         }
 
 
@@ -54,10 +55,37 @@ namespace SoftwareProject.Formularios
 
             if (form1 != null)
             {
-                form1.OpenChildForm(new VerPaquetes(cnx));
+                form1.OpenChildForm(new VerPaquetes(cnx,Cliente));
             }
            
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "exec spAdquirirPaquete @Usuario, @Paquete, @Precio";
+                SqlCommand command = new SqlCommand(query, cnx);
+                command.Parameters.AddWithValue("@Usuario", Cliente);
+                command.Parameters.AddWithValue("@Paquete", Id);
+                command.Parameters.AddWithValue("@Precio", Precio);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Paquete Adquirido con exito", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                if (form1 != null)
+                {
+                    form1.OpenChildForm(new VerPaquetes(cnx, Usuario));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void CargarDatos()

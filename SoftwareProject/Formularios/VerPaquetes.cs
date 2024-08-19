@@ -63,15 +63,10 @@ namespace SoftwareProject.Formularios
                     if (!reader.IsDBNull(reader.GetOrdinal("ClienteID")))
                     {
                         clienteID = reader.GetInt32(reader.GetOrdinal("ClienteID"));
-                        
-                    }
-                    else
-                    {
-                        MessageBox.Show("ClienteID es nulo o no se encontró.");
+
                     }
                 }
 
-                // Cerrar el SqlDataReader
                 reader.Close();
             }
             catch (Exception ex)
@@ -116,7 +111,7 @@ namespace SoftwareProject.Formularios
                     // Verifica si el formulario 'form1' no es nulo antes de usarlo
                     if (form1 != null)
                     {
-                        form1.OpenChildForm(new Paquetes(cnx,clienteID, paqueteId, nombre, precio, horas));
+                        form1.OpenChildForm(new Paquetes(cnx, clienteID, paqueteId, nombre, precio, horas,UsuarioID));
                     }
                 }
                 catch (Exception ex)
