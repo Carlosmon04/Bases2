@@ -58,6 +58,7 @@
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.LateralMenu.SuspendLayout();
             this.subMenuFinanza.SuspendLayout();
             this.subMenuP.SuspendLayout();
@@ -100,7 +101,7 @@
             this.subMenuFinanza.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuFinanza.Location = new System.Drawing.Point(0, 897);
             this.subMenuFinanza.Name = "subMenuFinanza";
-            this.subMenuFinanza.Size = new System.Drawing.Size(264, 100);
+            this.subMenuFinanza.Size = new System.Drawing.Size(260, 100);
             this.subMenuFinanza.TabIndex = 13;
             // 
             // btnActividad
@@ -112,7 +113,7 @@
             this.btnActividad.Location = new System.Drawing.Point(0, 45);
             this.btnActividad.Name = "btnActividad";
             this.btnActividad.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnActividad.Size = new System.Drawing.Size(264, 45);
+            this.btnActividad.Size = new System.Drawing.Size(260, 45);
             this.btnActividad.TabIndex = 2;
             this.btnActividad.Text = "Actividad";
             this.btnActividad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +129,7 @@
             this.btnCuentas.Location = new System.Drawing.Point(0, 0);
             this.btnCuentas.Name = "btnCuentas";
             this.btnCuentas.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnCuentas.Size = new System.Drawing.Size(264, 45);
+            this.btnCuentas.Size = new System.Drawing.Size(260, 45);
             this.btnCuentas.TabIndex = 1;
             this.btnCuentas.Text = "Ver cuentas";
             this.btnCuentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,7 +145,7 @@
             this.btnFinanzas.Location = new System.Drawing.Point(0, 846);
             this.btnFinanzas.Name = "btnFinanzas";
             this.btnFinanzas.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnFinanzas.Size = new System.Drawing.Size(264, 51);
+            this.btnFinanzas.Size = new System.Drawing.Size(260, 51);
             this.btnFinanzas.TabIndex = 12;
             this.btnFinanzas.Text = "Finanzas";
             this.btnFinanzas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +161,7 @@
             this.btnComprarA.Location = new System.Drawing.Point(0, 795);
             this.btnComprarA.Name = "btnComprarA";
             this.btnComprarA.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnComprarA.Size = new System.Drawing.Size(264, 51);
+            this.btnComprarA.Size = new System.Drawing.Size(260, 51);
             this.btnComprarA.TabIndex = 10;
             this.btnComprarA.Text = "Comprar Articulos";
             this.btnComprarA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +176,7 @@
             this.subMenuP.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuP.Location = new System.Drawing.Point(0, 694);
             this.subMenuP.Name = "subMenuP";
-            this.subMenuP.Size = new System.Drawing.Size(264, 101);
+            this.subMenuP.Size = new System.Drawing.Size(260, 101);
             this.subMenuP.TabIndex = 9;
             // 
             // btnInfoP
@@ -187,7 +188,7 @@
             this.btnInfoP.Location = new System.Drawing.Point(0, 45);
             this.btnInfoP.Name = "btnInfoP";
             this.btnInfoP.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnInfoP.Size = new System.Drawing.Size(264, 45);
+            this.btnInfoP.Size = new System.Drawing.Size(260, 45);
             this.btnInfoP.TabIndex = 3;
             this.btnInfoP.Text = "Informacion";
             this.btnInfoP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +204,7 @@
             this.btnAgregarP.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarP.Name = "btnAgregarP";
             this.btnAgregarP.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnAgregarP.Size = new System.Drawing.Size(264, 45);
+            this.btnAgregarP.Size = new System.Drawing.Size(260, 45);
             this.btnAgregarP.TabIndex = 1;
             this.btnAgregarP.Text = "Agregar";
             this.btnAgregarP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,7 +220,7 @@
             this.btnPaquetes.Location = new System.Drawing.Point(0, 643);
             this.btnPaquetes.Name = "btnPaquetes";
             this.btnPaquetes.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnPaquetes.Size = new System.Drawing.Size(264, 51);
+            this.btnPaquetes.Size = new System.Drawing.Size(260, 51);
             this.btnPaquetes.TabIndex = 8;
             this.btnPaquetes.Text = "Paquetes";
             this.btnPaquetes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,7 +237,7 @@
             this.subMenuS.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuS.Location = new System.Drawing.Point(0, 456);
             this.subMenuS.Name = "subMenuS";
-            this.subMenuS.Size = new System.Drawing.Size(264, 187);
+            this.subMenuS.Size = new System.Drawing.Size(260, 187);
             this.subMenuS.TabIndex = 7;
             // 
             // btnVerSolicitudes
@@ -248,7 +249,7 @@
             this.btnVerSolicitudes.Location = new System.Drawing.Point(0, 135);
             this.btnVerSolicitudes.Name = "btnVerSolicitudes";
             this.btnVerSolicitudes.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnVerSolicitudes.Size = new System.Drawing.Size(264, 45);
+            this.btnVerSolicitudes.Size = new System.Drawing.Size(260, 45);
             this.btnVerSolicitudes.TabIndex = 5;
             this.btnVerSolicitudes.Text = "Ver Solicitudes";
             this.btnVerSolicitudes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +265,7 @@
             this.button1.Location = new System.Drawing.Point(0, 90);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(264, 45);
+            this.button1.Size = new System.Drawing.Size(260, 45);
             this.button1.TabIndex = 4;
             this.button1.Text = "Solicitar Servicio";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,7 +281,7 @@
             this.btnInfoS.Location = new System.Drawing.Point(0, 45);
             this.btnInfoS.Name = "btnInfoS";
             this.btnInfoS.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnInfoS.Size = new System.Drawing.Size(264, 45);
+            this.btnInfoS.Size = new System.Drawing.Size(260, 45);
             this.btnInfoS.TabIndex = 3;
             this.btnInfoS.Text = "Informacion";
             this.btnInfoS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,7 +297,7 @@
             this.btnAgregarS.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarS.Name = "btnAgregarS";
             this.btnAgregarS.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnAgregarS.Size = new System.Drawing.Size(264, 45);
+            this.btnAgregarS.Size = new System.Drawing.Size(260, 45);
             this.btnAgregarS.TabIndex = 1;
             this.btnAgregarS.Text = "Agregar";
             this.btnAgregarS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,7 +313,7 @@
             this.btnServicios.Location = new System.Drawing.Point(0, 405);
             this.btnServicios.Name = "btnServicios";
             this.btnServicios.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnServicios.Size = new System.Drawing.Size(264, 51);
+            this.btnServicios.Size = new System.Drawing.Size(260, 51);
             this.btnServicios.TabIndex = 6;
             this.btnServicios.Text = "Servicios";
             this.btnServicios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -327,7 +328,7 @@
             this.subMenuInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuInventario.Location = new System.Drawing.Point(0, 304);
             this.subMenuInventario.Name = "subMenuInventario";
-            this.subMenuInventario.Size = new System.Drawing.Size(264, 101);
+            this.subMenuInventario.Size = new System.Drawing.Size(260, 101);
             this.subMenuInventario.TabIndex = 4;
             // 
             // btnInfoInv
@@ -339,7 +340,7 @@
             this.btnInfoInv.Location = new System.Drawing.Point(0, 45);
             this.btnInfoInv.Name = "btnInfoInv";
             this.btnInfoInv.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnInfoInv.Size = new System.Drawing.Size(264, 45);
+            this.btnInfoInv.Size = new System.Drawing.Size(260, 45);
             this.btnInfoInv.TabIndex = 3;
             this.btnInfoInv.Text = "Informacion";
             this.btnInfoInv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -355,7 +356,7 @@
             this.btnCompraInv.Location = new System.Drawing.Point(0, 0);
             this.btnCompraInv.Name = "btnCompraInv";
             this.btnCompraInv.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnCompraInv.Size = new System.Drawing.Size(264, 45);
+            this.btnCompraInv.Size = new System.Drawing.Size(260, 45);
             this.btnCompraInv.TabIndex = 1;
             this.btnCompraInv.Text = "Hacer Compra";
             this.btnCompraInv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,7 +372,7 @@
             this.btnInventario.Location = new System.Drawing.Point(0, 253);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(264, 51);
+            this.btnInventario.Size = new System.Drawing.Size(260, 51);
             this.btnInventario.TabIndex = 5;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,7 +386,7 @@
             this.subMenuClie.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuClie.Location = new System.Drawing.Point(0, 203);
             this.subMenuClie.Name = "subMenuClie";
-            this.subMenuClie.Size = new System.Drawing.Size(264, 50);
+            this.subMenuClie.Size = new System.Drawing.Size(260, 50);
             this.subMenuClie.TabIndex = 3;
             // 
             // btnAConsultarClie
@@ -397,7 +398,7 @@
             this.btnAConsultarClie.Location = new System.Drawing.Point(0, 0);
             this.btnAConsultarClie.Name = "btnAConsultarClie";
             this.btnAConsultarClie.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnAConsultarClie.Size = new System.Drawing.Size(264, 45);
+            this.btnAConsultarClie.Size = new System.Drawing.Size(260, 45);
             this.btnAConsultarClie.TabIndex = 1;
             this.btnAConsultarClie.Text = "Consultar";
             this.btnAConsultarClie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,7 +414,7 @@
             this.btnClientes.Location = new System.Drawing.Point(0, 152);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnClientes.Size = new System.Drawing.Size(264, 51);
+            this.btnClientes.Size = new System.Drawing.Size(260, 51);
             this.btnClientes.TabIndex = 2;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,7 +429,7 @@
             this.subMenuEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuEmpleado.Location = new System.Drawing.Point(0, 51);
             this.subMenuEmpleado.Name = "subMenuEmpleado";
-            this.subMenuEmpleado.Size = new System.Drawing.Size(264, 101);
+            this.subMenuEmpleado.Size = new System.Drawing.Size(260, 101);
             this.subMenuEmpleado.TabIndex = 1;
             // 
             // btnInfoEmpleado
@@ -440,7 +441,7 @@
             this.btnInfoEmpleado.Location = new System.Drawing.Point(0, 45);
             this.btnInfoEmpleado.Name = "btnInfoEmpleado";
             this.btnInfoEmpleado.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnInfoEmpleado.Size = new System.Drawing.Size(264, 45);
+            this.btnInfoEmpleado.Size = new System.Drawing.Size(260, 45);
             this.btnInfoEmpleado.TabIndex = 3;
             this.btnInfoEmpleado.Text = "Informacion";
             this.btnInfoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -456,7 +457,7 @@
             this.btnAggEmpleado.Location = new System.Drawing.Point(0, 0);
             this.btnAggEmpleado.Name = "btnAggEmpleado";
             this.btnAggEmpleado.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnAggEmpleado.Size = new System.Drawing.Size(264, 45);
+            this.btnAggEmpleado.Size = new System.Drawing.Size(260, 45);
             this.btnAggEmpleado.TabIndex = 1;
             this.btnAggEmpleado.Text = "Agregar";
             this.btnAggEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,7 +473,7 @@
             this.btnEmpleados.Location = new System.Drawing.Point(0, 0);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnEmpleados.Size = new System.Drawing.Size(264, 51);
+            this.btnEmpleados.Size = new System.Drawing.Size(260, 51);
             this.btnEmpleados.TabIndex = 1;
             this.btnEmpleados.Text = "Empleado";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -485,6 +486,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(34)))));
+            this.panelForms.Controls.Add(this.btnSalir);
             this.panelForms.Controls.Add(this.pictureBox1);
             this.panelForms.Location = new System.Drawing.Point(281, 0);
             this.panelForms.Name = "panelForms";
@@ -502,9 +504,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSalir.Location = new System.Drawing.Point(30, 651);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(128, 34);
+            this.btnSalir.TabIndex = 13;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1347, 705);
@@ -562,6 +577,7 @@
         private System.Windows.Forms.Button btnFinanzas;
         private System.Windows.Forms.Button btnComprarA;
         private System.Windows.Forms.Button btnActividad;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

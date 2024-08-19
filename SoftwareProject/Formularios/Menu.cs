@@ -174,6 +174,7 @@ namespace SoftwareProject
         int quien = 0;
             try
             {
+                //quienes pueden ver ciertas opciones
                 SqlCommand cmd = new SqlCommand("spJefes", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@userid", usuario);
@@ -207,12 +208,37 @@ namespace SoftwareProject
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (TipoAutorizado(cnx, userID) != 1)
-            { 
-               btnEmpleados.Visible = false;
+            /*
+            if (TipoAutorizado(cnx, userID) == 1)
+           { 
+               btnActividad.Visible = false;
+               btnComprarA.Visible = false;
+               btnInfoP.Visible = false;
+                button1.Visible = false;
                 
+           }
+
+            if (TipoAutorizado(cnx, userID) == 0)
+            { 
+                btnEmpleados.Visible = false;
+                btnClientes.Visible = false;
+                btnInventario.Visible = false;
+                btnAgregarS.Visible = false;
+                btnInfoS.Visible = false;
+                btnCuentas.Visible = false;
+                btnVerSolicitudes.Visible = false;
             }
 
+            if (TipoAutorizado(cnx, userID) == 2)
+            { 
+              btnEmpleados.Visible=false;
+              btnFinanzas.Visible=false;
+                btnInfoP.Visible = false;
+                button1.Visible = false;
+               
+            }
+                */
+                
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -285,11 +311,15 @@ namespace SoftwareProject
         private void btnCuentas_Click(object sender, EventArgs e)
         {
             Ocultar();
+            CuentasB cb = new CuentasB();
+            cb.Visible = true;
         }
 
         private void btnActividad_Click(object sender, EventArgs e)
         {
             Ocultar();
+            Actividad a = new Actividad(cnx,userID);
+            a.Visible = true;
         }
 
         private void btnVerSolicitudes_Click(object sender, EventArgs e)
@@ -303,6 +333,12 @@ namespace SoftwareProject
         {
             OpenChildForm(new VentaArticulo(cnx, userID));
             Ocultar();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }
