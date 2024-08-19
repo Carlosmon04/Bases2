@@ -13,12 +13,17 @@ namespace SoftwareProject.Formularios.Inventario
 {
     public partial class InformacionInv : Form
     {
-        SqlConnection cnx;
+        private SqlConnection cnx;
+        private int userID;
+
+        CompraArtExistente frm;
+
         DataTable TabInventario;
-        public InformacionInv(SqlConnection conexion)
+        public InformacionInv(SqlConnection conexion,int usuario)
         {
             InitializeComponent();
             cnx = conexion;
+            userID = usuario;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -78,7 +83,7 @@ namespace SoftwareProject.Formularios.Inventario
 
                 if (form1 != null)
                 {
-                    form1.OpenChildForm(new EditarInv(cnx, ArticuloID, Articulo, Descripcion, Medida, Existencia, Proveedor, Rentabilidad, Estado));
+                    form1.OpenChildForm(new EditarInv(cnx, ArticuloID, Articulo, Descripcion, Medida, Existencia, Proveedor, Rentabilidad, Estado,userID));
                 }
 
             }
@@ -189,6 +194,47 @@ namespace SoftwareProject.Formularios.Inventario
             else
             {
                 MessageBox.Show("Por favor seleccione una fila para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ComprarArt(SqlConnection cnx)
+        {
+            String Articulo, Descripcion, Medida, Proveedor;
+
+            try
+            {
+                Articulo = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Articulo"].ToString();
+                Descripcion = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Descripcion"].ToString();
+                Medida = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Medida"].ToString();
+                Proveedor = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Proveedor"].ToString();
+
+                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                if (form1 != null)
+                {
+                    frm =new CompraArtExistente(cnx,userID, Articulo, Medida, Proveedor, Descripcion);
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Ocurrio un Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnComprarArt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                ComprarArt(cnx);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione el articulo que desea Comprar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

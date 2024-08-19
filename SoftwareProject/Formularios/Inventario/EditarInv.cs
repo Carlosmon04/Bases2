@@ -16,6 +16,17 @@ namespace SoftwareProject.Formularios.Inventario
     {
         SqlConnection cnx;
         String Articulo, Descripcion, Medida, Existencia, Proveedor, Rentabilidad, Estado;
+        private int UserId;
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -25,7 +36,7 @@ namespace SoftwareProject.Formularios.Inventario
 
             if (form1 != null)
             {
-                form1.OpenChildForm(new InformacionInv(cnx));
+                form1.OpenChildForm(new InformacionInv(cnx,UserId));
             }
         }
 
@@ -49,7 +60,7 @@ namespace SoftwareProject.Formularios.Inventario
 
                 if (form1 != null)
                 {
-                    form1.OpenChildForm(new InformacionInv(cnx));
+                    form1.OpenChildForm(new InformacionInv(cnx,UserId));
                 }
 
             }
@@ -61,7 +72,7 @@ namespace SoftwareProject.Formularios.Inventario
 
         int ArticuloID;
 
-        public EditarInv(SqlConnection conexion, int articuloID, String articulo, string descripcion, String medida, String existencia, string proveedor, string rentabilidad, string estado)
+        public EditarInv(SqlConnection conexion, int articuloID, String articulo, string descripcion, String medida, String existencia, string proveedor, string rentabilidad, string estado, int usuario)
         {
             InitializeComponent();
             cnx = conexion;
@@ -73,6 +84,7 @@ namespace SoftwareProject.Formularios.Inventario
             Proveedor = proveedor;
             Rentabilidad = rentabilidad;
             Estado = estado;
+            UserId = usuario;
         }
 
         private void EditarInv_Load(object sender, EventArgs e)

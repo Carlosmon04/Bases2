@@ -222,13 +222,13 @@ namespace SoftwareProject
 
         private void btnCompraInv_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Compra(cnx, userID));
+            OpenChildForm(new NuevoExistente(cnx, userID));
             Ocultar();
         }
 
         private void btnInfoInv_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new InformacionInv(cnx));
+            OpenChildForm(new InformacionInv(cnx,userID));
             Ocultar();
         }
 

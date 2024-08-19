@@ -121,7 +121,7 @@ namespace SoftwareProject.Formularios
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
 
-                    //Implementar logica de las horas (Pendiente)
+
                 }
                 catch (SqlException ex)
                 {

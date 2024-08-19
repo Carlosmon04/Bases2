@@ -65,6 +65,12 @@
     <Compile Include="Formularios\Compra.Designer.cs">
       <DependentUpon>Compra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\CompraArtExistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraArtExistente.Designer.cs">
+      <DependentUpon>CompraArtExistente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CRUD Clientes\ConsultarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     <Compile Include="Formularios\Empleados\RegistroEmpleados.Designer.cs">
       <DependentUpon>RegistroEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\NuevoExistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NuevoExistente.Designer.cs">
+      <DependentUpon>NuevoExistente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Paquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,9 @@
     <EmbeddedResource Include="Formularios\Compra.resx">
       <DependentUpon>Compra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraArtExistente.resx">
+      <DependentUpon>CompraArtExistente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CRUD Clientes\ConsultarClientes.resx">
       <DependentUpon>ConsultarClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\RegistroEmpleados.resx">
       <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevoExistente.resx">
+      <DependentUpon>NuevoExistente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Paquetes.resx">
       <DependentUpon>Paquetes.cs</DependentUpon>
