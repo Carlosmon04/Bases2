@@ -95,8 +95,14 @@ namespace SoftwareProject.Formularios.CRUD_Clientes
                     {
                         int EmpleadoUserId = (int)TabClientes.DefaultView[dataGridView1.CurrentRow.Index]["Clienteid"];
 
-                        EditarCliente r = new EditarCliente(cnx, EmpleadoUserId);
-                        r.Visible = true;
+
+                        Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                        if (form1 != null)
+                        {
+                            form1.OpenChildForm(new EditarCliente(cnx, EmpleadoUserId));
+                        }
+                        
                     }
                 }
 

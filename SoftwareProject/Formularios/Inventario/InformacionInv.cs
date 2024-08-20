@@ -211,10 +211,6 @@ namespace SoftwareProject.Formularios.Inventario
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
         private void ComprarArt(SqlConnection cnx)
         {
             String Articulo, Descripcion, Medida, Proveedor;

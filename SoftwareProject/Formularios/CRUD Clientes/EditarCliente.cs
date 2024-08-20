@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SoftwareProject.Formularios.CRUD_Clientes;
 
 namespace SoftwareProject.Formularios.CRUD_Clientes
 {
@@ -175,8 +176,13 @@ namespace SoftwareProject.Formularios.CRUD_Clientes
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
+
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new ConsultarClientes(cnx));
+            }
         }
 
         private void cmxPaquete_SelectedIndexChanged(object sender, EventArgs e)

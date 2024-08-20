@@ -37,12 +37,10 @@
             this.btnComprarA = new System.Windows.Forms.Button();
             this.subMenuP = new System.Windows.Forms.Panel();
             this.btnInfoP = new System.Windows.Forms.Button();
-            this.btnAgregarP = new System.Windows.Forms.Button();
             this.btnPaquetes = new System.Windows.Forms.Button();
             this.subMenuS = new System.Windows.Forms.Panel();
             this.btnVerSolicitudes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnInfoS = new System.Windows.Forms.Button();
             this.btnAgregarS = new System.Windows.Forms.Button();
             this.btnServicios = new System.Windows.Forms.Button();
             this.subMenuInventario = new System.Windows.Forms.Panel();
@@ -57,8 +55,8 @@
             this.btnAggEmpleado = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LateralMenu.SuspendLayout();
             this.subMenuFinanza.SuspendLayout();
             this.subMenuP.SuspendLayout();
@@ -99,7 +97,7 @@
             this.subMenuFinanza.Controls.Add(this.btnActividad);
             this.subMenuFinanza.Controls.Add(this.btnCuentas);
             this.subMenuFinanza.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuFinanza.Location = new System.Drawing.Point(0, 897);
+            this.subMenuFinanza.Location = new System.Drawing.Point(0, 800);
             this.subMenuFinanza.Name = "subMenuFinanza";
             this.subMenuFinanza.Size = new System.Drawing.Size(260, 100);
             this.subMenuFinanza.TabIndex = 13;
@@ -142,7 +140,7 @@
             this.btnFinanzas.FlatAppearance.BorderSize = 0;
             this.btnFinanzas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinanzas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFinanzas.Location = new System.Drawing.Point(0, 846);
+            this.btnFinanzas.Location = new System.Drawing.Point(0, 749);
             this.btnFinanzas.Name = "btnFinanzas";
             this.btnFinanzas.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnFinanzas.Size = new System.Drawing.Size(260, 51);
@@ -158,7 +156,7 @@
             this.btnComprarA.FlatAppearance.BorderSize = 0;
             this.btnComprarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprarA.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnComprarA.Location = new System.Drawing.Point(0, 795);
+            this.btnComprarA.Location = new System.Drawing.Point(0, 698);
             this.btnComprarA.Name = "btnComprarA";
             this.btnComprarA.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnComprarA.Size = new System.Drawing.Size(260, 51);
@@ -172,11 +170,10 @@
             // 
             this.subMenuP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.subMenuP.Controls.Add(this.btnInfoP);
-            this.subMenuP.Controls.Add(this.btnAgregarP);
             this.subMenuP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuP.Location = new System.Drawing.Point(0, 694);
+            this.subMenuP.Location = new System.Drawing.Point(0, 648);
             this.subMenuP.Name = "subMenuP";
-            this.subMenuP.Size = new System.Drawing.Size(260, 101);
+            this.subMenuP.Size = new System.Drawing.Size(260, 50);
             this.subMenuP.TabIndex = 9;
             // 
             // btnInfoP
@@ -185,7 +182,7 @@
             this.btnInfoP.FlatAppearance.BorderSize = 0;
             this.btnInfoP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfoP.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnInfoP.Location = new System.Drawing.Point(0, 45);
+            this.btnInfoP.Location = new System.Drawing.Point(0, 0);
             this.btnInfoP.Name = "btnInfoP";
             this.btnInfoP.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btnInfoP.Size = new System.Drawing.Size(260, 45);
@@ -195,29 +192,13 @@
             this.btnInfoP.UseVisualStyleBackColor = true;
             this.btnInfoP.Click += new System.EventHandler(this.btnInfoP_Click);
             // 
-            // btnAgregarP
-            // 
-            this.btnAgregarP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregarP.FlatAppearance.BorderSize = 0;
-            this.btnAgregarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarP.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAgregarP.Location = new System.Drawing.Point(0, 0);
-            this.btnAgregarP.Name = "btnAgregarP";
-            this.btnAgregarP.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnAgregarP.Size = new System.Drawing.Size(260, 45);
-            this.btnAgregarP.TabIndex = 1;
-            this.btnAgregarP.Text = "Agregar";
-            this.btnAgregarP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarP.UseVisualStyleBackColor = true;
-            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
-            // 
             // btnPaquetes
             // 
             this.btnPaquetes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPaquetes.FlatAppearance.BorderSize = 0;
             this.btnPaquetes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaquetes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPaquetes.Location = new System.Drawing.Point(0, 643);
+            this.btnPaquetes.Location = new System.Drawing.Point(0, 597);
             this.btnPaquetes.Name = "btnPaquetes";
             this.btnPaquetes.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnPaquetes.Size = new System.Drawing.Size(260, 51);
@@ -232,12 +213,11 @@
             this.subMenuS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.subMenuS.Controls.Add(this.btnVerSolicitudes);
             this.subMenuS.Controls.Add(this.button1);
-            this.subMenuS.Controls.Add(this.btnInfoS);
             this.subMenuS.Controls.Add(this.btnAgregarS);
             this.subMenuS.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuS.Location = new System.Drawing.Point(0, 456);
             this.subMenuS.Name = "subMenuS";
-            this.subMenuS.Size = new System.Drawing.Size(260, 187);
+            this.subMenuS.Size = new System.Drawing.Size(260, 141);
             this.subMenuS.TabIndex = 7;
             // 
             // btnVerSolicitudes
@@ -246,7 +226,7 @@
             this.btnVerSolicitudes.FlatAppearance.BorderSize = 0;
             this.btnVerSolicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerSolicitudes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnVerSolicitudes.Location = new System.Drawing.Point(0, 135);
+            this.btnVerSolicitudes.Location = new System.Drawing.Point(0, 90);
             this.btnVerSolicitudes.Name = "btnVerSolicitudes";
             this.btnVerSolicitudes.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btnVerSolicitudes.Size = new System.Drawing.Size(260, 45);
@@ -262,7 +242,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 90);
+            this.button1.Location = new System.Drawing.Point(0, 45);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(260, 45);
@@ -271,22 +251,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnInfoS
-            // 
-            this.btnInfoS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInfoS.FlatAppearance.BorderSize = 0;
-            this.btnInfoS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfoS.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnInfoS.Location = new System.Drawing.Point(0, 45);
-            this.btnInfoS.Name = "btnInfoS";
-            this.btnInfoS.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.btnInfoS.Size = new System.Drawing.Size(260, 45);
-            this.btnInfoS.TabIndex = 3;
-            this.btnInfoS.Text = "Informacion";
-            this.btnInfoS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfoS.UseVisualStyleBackColor = true;
-            this.btnInfoS.Click += new System.EventHandler(this.btnInfoS_Click);
             // 
             // btnAgregarS
             // 
@@ -486,23 +450,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(34)))));
-            this.panelForms.Controls.Add(this.btnSalir);
             this.panelForms.Controls.Add(this.pictureBox1);
+            this.panelForms.Controls.Add(this.btnSalir);
             this.panelForms.Location = new System.Drawing.Point(281, 0);
             this.panelForms.Name = "panelForms";
             this.panelForms.Size = new System.Drawing.Size(1067, 705);
             this.panelForms.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(325, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(512, 512);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnSalir
             // 
@@ -516,6 +469,17 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 105);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(519, 467);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // Menu
             // 
@@ -540,7 +504,6 @@
             this.subMenuClie.ResumeLayout(false);
             this.subMenuEmpleado.ResumeLayout(false);
             this.panelForms.ResumeLayout(false);
-            this.panelForms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -557,18 +520,15 @@
         private System.Windows.Forms.Button btnAConsultarClie;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Panel panelForms;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel subMenuInventario;
         private System.Windows.Forms.Button btnInfoInv;
         private System.Windows.Forms.Button btnCompraInv;
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Panel subMenuS;
-        private System.Windows.Forms.Button btnInfoS;
         private System.Windows.Forms.Button btnAgregarS;
         private System.Windows.Forms.Button btnServicios;
         private System.Windows.Forms.Panel subMenuP;
         private System.Windows.Forms.Button btnInfoP;
-        private System.Windows.Forms.Button btnAgregarP;
         private System.Windows.Forms.Button btnPaquetes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVerSolicitudes;
@@ -578,6 +538,7 @@
         private System.Windows.Forms.Button btnComprarA;
         private System.Windows.Forms.Button btnActividad;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

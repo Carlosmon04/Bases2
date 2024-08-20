@@ -29,14 +29,22 @@ namespace SoftwareProject.Formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Compra frm = new Compra(cnx, userID);
-            frm.ShowDialog();
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new Compra(cnx, userID));
+            }
         }
 
         private void btnExistente_Click(object sender, EventArgs e)
         {
-            InformacionInv frm = new InformacionInv(cnx,userID);
-            frm.ShowDialog();
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new InformacionInv(cnx, userID));
+            }
         }
 
         private void NuevoExistente_Load(object sender, EventArgs e)

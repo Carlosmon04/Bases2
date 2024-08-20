@@ -44,27 +44,19 @@ namespace SoftwareProject.Formularios
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@SerciciosId", id);
 
-                    cnx.Open();
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
                         txtNombre.Text = reader["Nombre"].ToString();
                         txtPrecio.Text = reader["Precio"].ToString();
                         cmbEstado.SelectedItem = reader["Estado"].ToString();
+                        reader.Close();
                     }
-                    cnx.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar el servicio: " + ex.Message);
-            }
-            finally
-            {
-                if (cnx.State == ConnectionState.Open)
-                {
-                    cnx.Close();
-                }
             }
         }
 
@@ -108,27 +100,22 @@ namespace SoftwareProject.Formularios
                     command.Parameters.AddWithValue("@Precio", precio);
                     command.Parameters.AddWithValue("@Estado", estado);
 
-                    conexion.Open();
+                   
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
                         int nuevoId = Convert.ToInt32(reader["SerciciosId"]);
                         MessageBox.Show("Nuevo Servicio insertado con ID: " + nuevoId);
+                        reader.Close();
                     }
-                    conexion.Close();
+                   
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar el servicio: " + ex.Message);
             }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
+           
         }
 
         private void ActualizarServicio(int id, string nombre, float precio, string estado, SqlConnection conexion)
@@ -144,7 +131,6 @@ namespace SoftwareProject.Formularios
                     command.Parameters.AddWithValue("@Precio", precio);
                     command.Parameters.AddWithValue("@Estado", estado);
 
-                    conexion.Open();
                     command.ExecuteNonQuery();
                     MessageBox.Show("Servicio actualizado correctamente.");
                 }
@@ -153,13 +139,12 @@ namespace SoftwareProject.Formularios
             {
                 MessageBox.Show("Error al actualizar el servicio: " + ex.Message);
             }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
+            
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

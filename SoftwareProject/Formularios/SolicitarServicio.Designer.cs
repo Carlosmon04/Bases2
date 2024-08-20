@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Calendar1 = new System.Windows.Forms.MonthCalendar();
+            this.cmxHoras = new System.Windows.Forms.ComboBox();
             this.btnConfirmarVisita = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmxHoras = new System.Windows.Forms.ComboBox();
-            this.Calendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,6 +54,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 523);
             this.panel1.TabIndex = 0;
+            // 
+            // Calendar1
+            // 
+            this.Calendar1.Location = new System.Drawing.Point(49, 37);
+            this.Calendar1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
+            this.Calendar1.MinDate = new System.DateTime(2024, 8, 17, 0, 0, 0, 0);
+            this.Calendar1.Name = "Calendar1";
+            this.Calendar1.TabIndex = 17;
+            // 
+            // cmxHoras
+            // 
+            this.cmxHoras.FormattingEnabled = true;
+            this.cmxHoras.Items.AddRange(new object[] {
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00"});
+            this.cmxHoras.Location = new System.Drawing.Point(102, 279);
+            this.cmxHoras.Name = "cmxHoras";
+            this.cmxHoras.Size = new System.Drawing.Size(121, 24);
+            this.cmxHoras.TabIndex = 16;
+            this.cmxHoras.SelectedIndexChanged += new System.EventHandler(this.cmxHoras_SelectedIndexChanged);
             // 
             // btnConfirmarVisita
             // 
@@ -111,39 +141,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(72, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(706, 387);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
-            // 
-            // cmxHoras
-            // 
-            this.cmxHoras.FormattingEnabled = true;
-            this.cmxHoras.Items.AddRange(new object[] {
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00"});
-            this.cmxHoras.Location = new System.Drawing.Point(102, 279);
-            this.cmxHoras.Name = "cmxHoras";
-            this.cmxHoras.Size = new System.Drawing.Size(121, 24);
-            this.cmxHoras.TabIndex = 16;
-            this.cmxHoras.SelectedIndexChanged += new System.EventHandler(this.cmxHoras_SelectedIndexChanged);
-            // 
-            // Calendar1
-            // 
-            this.Calendar1.Location = new System.Drawing.Point(49, 37);
-            this.Calendar1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.Calendar1.MinDate = new System.DateTime(2024, 8, 17, 0, 0, 0, 0);
-            this.Calendar1.Name = "Calendar1";
-            this.Calendar1.TabIndex = 17;
             // 
             // SolicitarServicio
             // 

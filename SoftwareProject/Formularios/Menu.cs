@@ -233,7 +233,6 @@ namespace SoftwareProject
                 btnClientes.Visible = false;
                 btnInventario.Visible = false;
                 btnAgregarS.Visible = false;
-                btnInfoS.Visible = false;
                 btnCuentas.Visible = false;
                 btnVerSolicitudes.Visible = false;
             }
@@ -282,12 +281,6 @@ namespace SoftwareProject
             Ocultar();
         }
 
-        private void btnInfoS_Click(object sender, EventArgs e)
-        {
-            //OpenChildForm(new El formulario que van a llamar por ejemplo infoPaquetes(cnx));
-            Ocultar();
-        }
-
         private void btnPaquetes_Click(object sender, EventArgs e)
         {
             Mostrar(subMenuP);
@@ -307,10 +300,8 @@ namespace SoftwareProject
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-            SolicitarServicio s = new SolicitarServicio(cnx, userID);
-            s.Visible = true;
-
+            OpenChildForm(new SolicitarServicio(cnx, userID));
+            Ocultar();
         }
 
         private void btnFinanzas_Click(object sender, EventArgs e)
@@ -320,22 +311,19 @@ namespace SoftwareProject
 
         private void btnCuentas_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new CuentasB(cnx));
             Ocultar();
-            CuentasB cb = new CuentasB(cnx);
-            cb.Visible = true;
         }
 
         private void btnActividad_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new Actividad(cnx, userID));
             Ocultar();
-            Actividad a = new Actividad(cnx,userID);
-            a.Visible = true;
         }
 
         private void btnVerSolicitudes_Click(object sender, EventArgs e)
         {
-            VerSolicitudes vs = new VerSolicitudes(cnx, userID);
-            vs.Visible = true;
+            OpenChildForm(new VerSolicitudes(cnx, userID));
             Ocultar();
         }
 

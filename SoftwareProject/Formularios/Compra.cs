@@ -46,7 +46,12 @@ namespace SoftwareProject.Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new NuevoExistente(cnx, userID));
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

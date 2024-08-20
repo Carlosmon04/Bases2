@@ -70,7 +70,7 @@ namespace SoftwareProject.Formularios
                     {
                         using (SqlCommand cmd = new SqlCommand("spEliminarServicio", cnx))
                         {
-                            cnx.Open();
+                           
                             cmd.CommandType = CommandType.StoredProcedure;
                             cmd.Parameters.AddWithValue("@ServicioId", ServicioId);
                             cmd.ExecuteNonQuery();
@@ -95,11 +95,13 @@ namespace SoftwareProject.Formularios
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 int selectedId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["SerciciosId"].Value);
-                NuevoServicio form = new NuevoServicio(cnx, true, selectedId);
-                if (form.ShowDialog() == DialogResult.OK)
+                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                if (form1 != null)
                 {
-                    CargarServicios();
+                    form1.OpenChildForm(new NuevoServicio(cnx,true, selectedId));
                 }
+
             }
             else
             {
@@ -109,11 +111,13 @@ namespace SoftwareProject.Formularios
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            NuevoServicio from = new NuevoServicio(cnx);
-            if (from.ShowDialog() == DialogResult.OK)
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
             {
-                CargarServicios();
+                form1.OpenChildForm(new NuevoServicio(cnx));
             }
+            
         }
     }
 }

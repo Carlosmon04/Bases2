@@ -89,8 +89,13 @@ namespace SoftwareProject.Formularios
                         {
                             Console.WriteLine(ClienteID);
                             Console.WriteLine(Solicitud);
-                            AsignarEmpleado r = new AsignarEmpleado(cnx, ClienteID, Solicitud);
-                       r.Visible = true;
+                            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                            if (form1 != null)
+                            {
+                                form1.OpenChildForm(new AsignarEmpleado(cnx, ClienteID,Solicitud));
+                            }
+                            
                     }
                         
                     }
@@ -105,7 +110,7 @@ namespace SoftwareProject.Formularios
 
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+       private void btnRefresh_Click(object sender, EventArgs e)
         {
             try
             {
@@ -148,6 +153,16 @@ namespace SoftwareProject.Formularios
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

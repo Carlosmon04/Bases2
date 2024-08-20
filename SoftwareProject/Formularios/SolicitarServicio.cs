@@ -120,7 +120,7 @@ namespace SoftwareProject.Formularios
                    
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
-
+                    MessageBox.Show("Gracias por Solicitar un servicio","Gracias", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch (SqlException ex)

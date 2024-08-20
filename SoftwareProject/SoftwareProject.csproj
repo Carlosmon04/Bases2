@@ -185,12 +185,6 @@
     <Compile Include="Formularios\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\VentaArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\VentaArticulo.Designer.cs">
-      <DependentUpon>VentaArticulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\VerPaquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,8 +274,8 @@
     <EmbeddedResource Include="Formularios\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\VentaArticulo.resx">
-      <DependentUpon>VentaArticulo.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\SolicitarServicio.resx">
+      <DependentUpon>SolicitarServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerSolicitudes.resx">
       <DependentUpon>VerSolicitudes.cs</DependentUpon>
