@@ -21,6 +21,7 @@ namespace SoftwareProject
         private SqlConnection cnx;
         private int userID;
         private int ClienteID;
+        
         public Menu(SqlConnection conexion, int usuario)
         {
             InitializeComponent();
@@ -170,45 +171,53 @@ namespace SoftwareProject
         }
 
         private int TipoAutorizado(SqlConnection conexion, int usuario)
-        { 
-        int quien = 0;
+        {
+            int quien = 10; // Valor por defecto
             try
             {
-                //quienes pueden ver ciertas opciones
                 SqlCommand cmd = new SqlCommand("spJefes", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@userid", usuario);
-                cmd.ExecuteNonQuery();
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
+                if (reader.HasRows)
+                {
+                    reader.Read();
 
-                if (reader.Read()) { 
-                if (reader.IsDBNull(0))
-                {
-                    quien = 1;
+                    // Imprimir el valor de jefeId para depuración
+                    var jefeId = reader["jefeId"];
+                    Console.WriteLine("jefeId: " + (jefeId == DBNull.Value ? "NULL" : jefeId.ToString()));
 
+                    if (jefeId == DBNull.Value)
+                    {
+                        quien = 1;
+                    }
+                    else
+                    {
+                        quien = 2;
+                    }
                 }
-                if (!reader.IsDBNull(0))
+                else
                 {
-                    quien = 2;
+                    Console.WriteLine("No rows found."); // Depuración
+                    quien = 0; // No hay filas, usuario no autorizado
                 }
-                if (!reader.HasRows)
-                {
-                    quien = 0;
-                }
-            }
+
                 reader.Close();
                 return quien;
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Ocurrio un Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             return quien;
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*
+            Console.WriteLine(TipoAutorizado(cnx, userID));
             if (TipoAutorizado(cnx, userID) == 1)
            { 
                btnActividad.Visible = false;
@@ -235,9 +244,10 @@ namespace SoftwareProject
               btnFinanzas.Visible=false;
                 btnInfoP.Visible = false;
                 button1.Visible = false;
+                btnComprarA.Visible=false;
                
             }
-                */
+                
                 
         }
 
