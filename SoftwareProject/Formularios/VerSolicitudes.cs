@@ -158,7 +158,21 @@ namespace SoftwareProject.Formularios
         private void btnEditar_Click(object sender, EventArgs e)
         {
 
+            if (dataGridView1.Rows.Count > 0)
+            {
+
+                int Soli = (int)TabSolicitudes.DefaultView[dataGridView1.CurrentRow.Index]["SolicitudId"];
+                int clienteE = (int)TabSolicitudes.DefaultView[dataGridView1.CurrentRow.Index]["ClienteID"];
+                DateTime FechaInical = (DateTime)TabSolicitudes.DefaultView[dataGridView1.CurrentRow.Index]["HoraEntrada"];
+
+                EditarSoli es = new EditarSoli(cnx, clienteE,Soli);
+                es.Visible = true;
+            }
+
+            
         }
+
+       
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {

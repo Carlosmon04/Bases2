@@ -183,5 +183,13 @@ namespace SoftwareProject.Formularios
             }
         }
         }
+
+        private void Calendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (e.Start.DayOfWeek == DayOfWeek.Sunday)
+            {
+                MessageBox.Show("Cerrado Dias Domingo", "Cerrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

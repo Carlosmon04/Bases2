@@ -113,6 +113,12 @@
     <Compile Include="Formularios\DetalleArtVenta.Designer.cs">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EditarSoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarSoli.Designer.cs">
+      <DependentUpon>EditarSoli.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Empleados\EditarEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\DetalleArtVenta.resx">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarSoli.resx">
+      <DependentUpon>EditarSoli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\EditarEmpleados.resx">
       <DependentUpon>EditarEmpleados.cs</DependentUpon>

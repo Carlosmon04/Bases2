@@ -62,6 +62,7 @@
             this.Calendar1.MinDate = new System.DateTime(2024, 8, 17, 0, 0, 0, 0);
             this.Calendar1.Name = "Calendar1";
             this.Calendar1.TabIndex = 17;
+            this.Calendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendar1_DateChanged);
             // 
             // cmxHoras
             // 
