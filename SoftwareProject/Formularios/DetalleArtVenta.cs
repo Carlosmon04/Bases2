@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,10 +15,8 @@ namespace SoftwareProject.Formularios
     public partial class DetalleArtVenta : Form
     {
         string Articulo, PrecioBase;
-        int Index;
-
         private SqlConnection cnx;
-        private int userID;
+        private int userID, ArticuloID;
 
         SqlCommand cmd;
         public DetalleArtVenta()
@@ -25,14 +24,15 @@ namespace SoftwareProject.Formularios
             InitializeComponent();
         }
 
-        public DetalleArtVenta(SqlConnection conexion, int usuario,string articulo,string precioBase, int index)
+        public DetalleArtVenta(SqlConnection conexion, int usuario,string articulo,string precioBase, int AID)
         {
             InitializeComponent();
             cnx = conexion;
             userID = usuario;
             Articulo = articulo;
             PrecioBase = precioBase;
-            Index = index;
+            ArticuloID = AID;
+         
         }
 
         double precioTotal() 
@@ -79,7 +79,13 @@ namespace SoftwareProject.Formularios
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Dispose();
+
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new CompraArtC(cnx,userID));
+            }
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -89,13 +95,20 @@ namespace SoftwareProject.Formularios
 
             cmd = new SqlCommand("spCompraArtCliente", cnx);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ArticuloId", Index);
+            cmd.Parameters.AddWithValue("@ArticuloId", ArticuloID);
             cmd.Parameters.AddWithValue("@UsuarioId", userID);
             cmd.Parameters.AddWithValue("@precio", txtPrecioTotal.Text);
             cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
             cmd.ExecuteNonQuery();
 
-            txtCantidad.Clear();
+            
+                MessageBox.Show("Muchas Gracias por su compra", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                if (form1 != null)
+                {
+                    form1.OpenChildForm(new CompraArtC(cnx, userID));
+                }
 
             }
             catch (SqlException ex)

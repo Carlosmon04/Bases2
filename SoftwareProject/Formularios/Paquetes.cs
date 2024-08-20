@@ -61,31 +61,63 @@ namespace SoftwareProject.Formularios
 
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
-                string query = "exec spAdquirirPaquete @Usuario, @Paquete, @Precio";
-                SqlCommand command = new SqlCommand(query, cnx);
-                command.Parameters.AddWithValue("@Usuario", Cliente);
-                command.Parameters.AddWithValue("@Paquete", Id);
-                command.Parameters.AddWithValue("@Precio", Precio);
+    {
+                string query = "SELECT * FROM FDPaquete p INNER JOIN Factura f ON f.FacturaID = p.FacturaID WHERE f.ClienteID = @ClienteID";
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Paquete Adquirido con exito", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
-
-                if (form1 != null)
+                using (SqlCommand command = new SqlCommand(query, cnx))
                 {
-                    form1.OpenChildForm(new VerPaquetes(cnx, Usuario));
+                    command.Parameters.AddWithValue("@ClienteID", Cliente);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (reader["PaqueteID"] != DBNull.Value)
+                            {
+                                MessageBox.Show("Este usuario ya tiene un Paquete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return; // No es necesario cerrar el reader aquí, se cierra automáticamente al salir del using
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron paquetes para este usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return; // No se encontraron paquetes, no es necesario seguir con el proceso
+                        }
+                    }
+
+                    // Si llegamos aquí, el usuario no tiene un paquete y podemos proceder a adquirirlo
+                    string query2 = "exec spAdquirirPaquete @Usuario, @Paquete, @Precio";
+
+                    using (SqlCommand command2 = new SqlCommand(query2, cnx))
+                    {
+                        command2.Parameters.AddWithValue("@Usuario", Cliente);
+                        command2.Parameters.AddWithValue("@Paquete", Id);
+                        command2.Parameters.AddWithValue("@Precio", Precio);
+
+                        command2.ExecuteNonQuery();
+                        MessageBox.Show("Paquete Adquirido con éxito", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                        if (form1 != null)
+                        {
+                            form1.OpenChildForm(new VerPaquetes(cnx, Usuario));
+                        }
+                    }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrio un Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+    catch (Exception ex)
+    {
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
         }
 
         private void CargarDatos()

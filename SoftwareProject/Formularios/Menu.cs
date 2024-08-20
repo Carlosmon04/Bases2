@@ -331,7 +331,7 @@ namespace SoftwareProject
 
         private void btnComprarA_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new VentaArticulo(cnx, userID));
+            OpenChildForm(new CompraArtC(cnx, userID));
             Ocultar();
         }
 
