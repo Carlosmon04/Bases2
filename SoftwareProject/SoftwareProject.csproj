@@ -205,6 +205,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Actividad.resx">
+      <DependentUpon>Actividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AsignarEmpleado.resx">
       <DependentUpon>AsignarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
