@@ -40,7 +40,7 @@ namespace SoftwareProject.Formularios
             double precio, precioTotal;
 
             precio = double.Parse(PrecioBase);
-            precioTotal = precio * 1.20;
+            precioTotal = precio * 1.15;
 
             return precioTotal; 
         }

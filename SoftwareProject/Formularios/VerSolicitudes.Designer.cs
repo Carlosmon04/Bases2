@@ -54,7 +54,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1372, 596);
+            this.panel2.Size = new System.Drawing.Size(1020, 596);
             this.panel2.TabIndex = 2;
             // 
             // btnRegresar
@@ -159,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 596);
+            this.ClientSize = new System.Drawing.Size(1020, 596);
             this.Controls.Add(this.panel2);
             this.Name = "VerSolicitudes";
             this.Text = "VerSolicitudes";

@@ -119,17 +119,35 @@
     <Compile Include="Formularios\DetalleArtVenta.Designer.cs">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EditarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarFacturas.Designer.cs">
+      <DependentUpon>EditarFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\EditarSoli.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\EditarSoli.Designer.cs">
       <DependentUpon>EditarSoli.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EFacturaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EFacturaArticulo.Designer.cs">
+      <DependentUpon>EFacturaArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Empleados\EditarEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Empleados\EditarEmpleados.Designer.cs">
       <DependentUpon>EditarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FacturasDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FacturasDetalle.Designer.cs">
+      <DependentUpon>FacturasDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Inventario\EditarInv.cs">
       <SubType>Form</SubType>
@@ -253,11 +271,20 @@
     <EmbeddedResource Include="Formularios\DetalleArtVenta.resx">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarFacturas.resx">
+      <DependentUpon>EditarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarSoli.resx">
       <DependentUpon>EditarSoli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EFacturaArticulo.resx">
+      <DependentUpon>EFacturaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\EditarEmpleados.resx">
       <DependentUpon>EditarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FacturasDetalle.resx">
+      <DependentUpon>FacturasDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inventario\EditarInv.resx">
       <DependentUpon>EditarInv.cs</DependentUpon>

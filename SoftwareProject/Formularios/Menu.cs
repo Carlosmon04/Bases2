@@ -350,6 +350,8 @@ namespace SoftwareProject
         private void button3_Click(object sender, EventArgs e)
         {
             Ocultar();
+            FacturasDetalle fd = new FacturasDetalle(cnx);
+                fd.Visible = true;
         }
     }
 }
