@@ -100,5 +100,10 @@ namespace SoftwareProject.Formularios
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = filtro;
 
         }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarFacturas(cnx);
+        }
     }
 }

@@ -119,11 +119,23 @@
     <Compile Include="Formularios\DetalleArtVenta.Designer.cs">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EditarFacturaPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarFacturaPaquete.Designer.cs">
+      <DependentUpon>EditarFacturaPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\EditarFacturas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\EditarFacturas.Designer.cs">
       <DependentUpon>EditarFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarFServiciocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarFServiciocs.Designer.cs">
+      <DependentUpon>EditarFServiciocs.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\EditarSoli.cs">
       <SubType>Form</SubType>
@@ -271,8 +283,14 @@
     <EmbeddedResource Include="Formularios\DetalleArtVenta.resx">
       <DependentUpon>DetalleArtVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarFacturaPaquete.resx">
+      <DependentUpon>EditarFacturaPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarFacturas.resx">
       <DependentUpon>EditarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarFServiciocs.resx">
+      <DependentUpon>EditarFServiciocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarSoli.resx">
       <DependentUpon>EditarSoli.cs</DependentUpon>

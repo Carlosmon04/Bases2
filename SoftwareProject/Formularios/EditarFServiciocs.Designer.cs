@@ -1,6 +1,6 @@
 ﻿namespace SoftwareProject.Formularios
 {
-    partial class EFacturaArticulo
+    partial class EditarFServiciocs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnConfirmarF = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtServicioID = new System.Windows.Forms.TextBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,45 +46,39 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
             this.panel2.Controls.Add(this.btnRefrescar);
-            this.panel2.Controls.Add(this.txtSubtotal);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtPrecio);
             this.panel2.Controls.Add(this.btnConfirmarF);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtCantidad);
+            this.panel2.Controls.Add(this.txtServicioID);
             this.panel2.Controls.Add(this.btnRegresar);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1275, 584);
-            this.panel2.TabIndex = 5;
+            this.panel2.Size = new System.Drawing.Size(1283, 611);
+            this.panel2.TabIndex = 6;
             // 
-            // txtSubtotal
+            // btnRefrescar
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(1013, 409);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(159, 22);
-            this.txtSubtotal.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label3.Location = new System.Drawing.Point(991, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(224, 23);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Unidad Con Impuesto";
+            this.btnRefrescar.BackColor = System.Drawing.SystemColors.Info;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefrescar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
+            this.btnRefrescar.Location = new System.Drawing.Point(471, 499);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(113, 33);
+            this.btnRefrescar.TabIndex = 17;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label2.Location = new System.Drawing.Point(1021, 339);
+            this.label2.Location = new System.Drawing.Point(1032, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 14;
@@ -105,7 +97,7 @@
             this.btnConfirmarF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmarF.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarF.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirmarF.Location = new System.Drawing.Point(1042, 499);
+            this.btnConfirmarF.Location = new System.Drawing.Point(1036, 382);
             this.btnConfirmarF.Name = "btnConfirmarF";
             this.btnConfirmarF.Size = new System.Drawing.Size(113, 33);
             this.btnConfirmarF.TabIndex = 12;
@@ -120,17 +112,16 @@
             this.label1.ForeColor = System.Drawing.Color.FloralWhite;
             this.label1.Location = new System.Drawing.Point(1038, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 23);
+            this.label1.Size = new System.Drawing.Size(84, 23);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Cantidad";
+            this.label1.Text = "Servicio";
             // 
-            // txtCantidad
+            // txtServicioID
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(1025, 113);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(159, 22);
-            this.txtCantidad.TabIndex = 10;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtServicioID.Location = new System.Drawing.Point(1025, 113);
+            this.txtServicioID.Name = "txtServicioID";
+            this.txtServicioID.Size = new System.Drawing.Size(159, 22);
+            this.txtServicioID.TabIndex = 10;
             // 
             // btnRegresar
             // 
@@ -155,36 +146,22 @@
             this.dataGridView1.Location = new System.Drawing.Point(48, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(908, 387);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.BackColor = System.Drawing.SystemColors.Info;
-            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefrescar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
-            this.btnRefrescar.Location = new System.Drawing.Point(471, 499);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(113, 33);
-            this.btnRefrescar.TabIndex = 17;
-            this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
-            // 
-            // EFacturaArticulo
+            // EditarFServiciocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 584);
+            this.ClientSize = new System.Drawing.Size(1283, 611);
             this.Controls.Add(this.panel2);
-            this.Name = "EFacturaArticulo";
-            this.Text = "EFacturaArticulo";
-            this.Load += new System.EventHandler(this.EFacturaArticulo_Load);
+            this.Name = "EditarFServiciocs";
+            this.Text = "EditarFServiciocs";
+            this.Load += new System.EventHandler(this.EditarFServiciocs_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -195,15 +172,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnConfirmarF;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtSubtotal;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnRefrescar;
+        private System.Windows.Forms.Button btnConfirmarF;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtServicioID;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -161,8 +161,13 @@ namespace SoftwareProject.Formularios
                 ConfirmarfacturaA(cnx, FacturaID, ArticuloID, Totalfloat, x, Cantidad, y, j,Articuloid);
                 Console.WriteLine(ArticuloID);
                 Console.WriteLine(Articuloid);
-                this.Close();
+                //this.Close();
             }
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Inventario(cnx);
         }
     }
 }
