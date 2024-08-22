@@ -41,6 +41,7 @@ namespace SoftwareProject
             subMenuS.Visible = false;
             subMenuP.Visible = false;
             subMenuFinanza.Visible = false;
+            subMenuF.Visible = false;
         }
 
         private void RecuperarClienteID()
@@ -109,6 +110,10 @@ namespace SoftwareProject
                 subMenuFinanza.Visible = false;
             }
 
+            if (subMenuF.Visible== true)
+            {
+               subMenuF.Visible = false; 
+            }
 
         }
 
@@ -222,7 +227,6 @@ namespace SoftwareProject
            { 
                btnActividad.Visible = false;
                btnComprarA.Visible = false;
-               btnInfoP.Visible = false;
                 button1.Visible = false;
                 
            }
@@ -235,13 +239,12 @@ namespace SoftwareProject
                 btnAgregarS.Visible = false;
                 btnCuentas.Visible = false;
                 btnVerSolicitudes.Visible = false;
+                btnFacturas.Visible = false;
             }
 
             if (TipoAutorizado(cnx, userID) == 2)
             { 
-              btnEmpleados.Visible=false;
-              btnFinanzas.Visible=false;
-                btnInfoP.Visible = false;
+                btnEmpleados.Visible=false;    
                 button1.Visible = false;
                 btnComprarA.Visible=false;
                
@@ -337,6 +340,16 @@ namespace SoftwareProject
         {
             this.Close();
             
+        }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            Mostrar(subMenuF);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Ocultar();
         }
     }
 }

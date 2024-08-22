@@ -18,7 +18,7 @@ namespace SoftwareProject.Formularios
         SqlConnection cnx;
         DataTable TabPaquetes;
         int UsuarioID;
-        int clienteID;
+        int clienteID = -1;
 
         public VerPaquetes(SqlConnection conexion, int usuarioID)
         {
@@ -26,9 +26,13 @@ namespace SoftwareProject.Formularios
             cnx = conexion;
             UsuarioID = usuarioID;
         }
-
+        
         private void VerPaquetes_Load(object sender, EventArgs e)
         {
+            btnAgg.Visible = false;
+            btnEditar.Visible = false;
+            btnEliminar.Visible = false;
+
             try
             {
                 TabPaquetes = new DataTable();
@@ -40,6 +44,14 @@ namespace SoftwareProject.Formularios
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridView1.ScrollBars = ScrollBars.Both;
                 RecuperarClienteID();
+
+                if (clienteID == -1)
+                {
+                    btnAgg.Visible = true;
+                    btnEditar.Visible = true; 
+                    btnEliminar.Visible = true;
+                }
+
             }
             catch (SqlException ex)
             {

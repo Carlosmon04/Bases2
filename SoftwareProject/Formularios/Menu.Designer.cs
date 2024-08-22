@@ -57,6 +57,9 @@
             this.panelForms = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.subMenuF = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
             this.LateralMenu.SuspendLayout();
             this.subMenuFinanza.SuspendLayout();
             this.subMenuP.SuspendLayout();
@@ -66,12 +69,15 @@
             this.subMenuEmpleado.SuspendLayout();
             this.panelForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.subMenuF.SuspendLayout();
             this.SuspendLayout();
             // 
             // LateralMenu
             // 
             this.LateralMenu.AutoScroll = true;
             this.LateralMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.LateralMenu.Controls.Add(this.subMenuF);
+            this.LateralMenu.Controls.Add(this.btnFacturas);
             this.LateralMenu.Controls.Add(this.subMenuFinanza);
             this.LateralMenu.Controls.Add(this.btnFinanzas);
             this.LateralMenu.Controls.Add(this.btnComprarA);
@@ -88,7 +94,7 @@
             this.LateralMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.LateralMenu.Location = new System.Drawing.Point(0, 0);
             this.LateralMenu.Name = "LateralMenu";
-            this.LateralMenu.Size = new System.Drawing.Size(281, 742);
+            this.LateralMenu.Size = new System.Drawing.Size(281, 749);
             this.LateralMenu.TabIndex = 0;
             // 
             // subMenuFinanza
@@ -454,7 +460,7 @@
             this.panelForms.Controls.Add(this.btnSalir);
             this.panelForms.Location = new System.Drawing.Point(281, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1105, 742);
+            this.panelForms.Size = new System.Drawing.Size(1105, 796);
             this.panelForms.TabIndex = 2;
             // 
             // pictureBox1
@@ -481,12 +487,54 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // subMenuF
+            // 
+            this.subMenuF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.subMenuF.Controls.Add(this.button3);
+            this.subMenuF.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subMenuF.Location = new System.Drawing.Point(0, 951);
+            this.subMenuF.Name = "subMenuF";
+            this.subMenuF.Size = new System.Drawing.Size(260, 54);
+            this.subMenuF.TabIndex = 14;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(260, 45);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Detalles";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnFacturas
+            // 
+            this.btnFacturas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFacturas.FlatAppearance.BorderSize = 0;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFacturas.Location = new System.Drawing.Point(0, 900);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnFacturas.Size = new System.Drawing.Size(260, 51);
+            this.btnFacturas.TabIndex = 15;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1385, 742);
+            this.ClientSize = new System.Drawing.Size(1385, 749);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.LateralMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -505,6 +553,7 @@
             this.subMenuEmpleado.ResumeLayout(false);
             this.panelForms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.subMenuF.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -539,6 +588,9 @@
         private System.Windows.Forms.Button btnActividad;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel subMenuF;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnFacturas;
     }
 }
 

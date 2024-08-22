@@ -221,6 +221,7 @@ namespace SoftwareProject.Formularios.Inventario
                 Descripcion = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Descripcion"].ToString();
                 Medida = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Medida"].ToString();
                 Proveedor = TabInventario.DefaultView[dataGridView1.CurrentRow.Index]["Proveedor"].ToString();
+              
 
                 Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
 
