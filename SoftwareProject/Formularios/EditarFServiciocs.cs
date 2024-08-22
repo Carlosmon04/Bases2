@@ -19,13 +19,13 @@ namespace SoftwareProject.Formularios
         private int SolicitudID;
         private float Total;
         DataTable TabServicios;
-        public EditarFServiciocs(SqlConnection conexion, int factura, int servicio, int solicitud,float total)
+        public EditarFServiciocs(SqlConnection conexion, int factura, int servicio,float total)
         {
             InitializeComponent();
             cnx= conexion;
             FacturaID = factura;
             ServicioID = servicio;
-            SolicitudID = solicitud;
+            //SolicitudID = solicitud;
             Total = total;
         }
 

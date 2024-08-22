@@ -167,9 +167,9 @@ namespace SoftwareProject.Formularios
             {
                 int FacturaIDS = (int)TabFDfacturas.DefaultView[dataGridView1.CurrentRow.Index]["FacturaID"];
                 int ServicioID = (int)TabFDfacturas.DefaultView[dataGridView1.CurrentRow.Index]["ServicioID"];
-                int SolicitudID = (int)TabFDfacturas.DefaultView[dataGridView1.CurrentRow.Index]["SolicitudID"];
+              // var SolicitudID = Convert.ToInt32(TabFDfacturas.DefaultView[dataGridView1.CurrentRow.Index]["SolicitudID"]);
                 var total = Convert.ToSingle(TabFDfacturas.DefaultView[dataGridView1.CurrentRow.Index]["Precio"]);
-                EditarFServiciocs es = new EditarFServiciocs(cnx, FacturaIDS, ServicioID, SolicitudID,total);
+                EditarFServiciocs es = new EditarFServiciocs(cnx, FacturaIDS, ServicioID,total);
                 es.Visible = true ;
 
             }
