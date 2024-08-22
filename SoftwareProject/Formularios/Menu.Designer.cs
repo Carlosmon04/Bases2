@@ -55,8 +55,8 @@
             this.btnAggEmpleado = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.LateralMenu.SuspendLayout();
             this.subMenuFinanza.SuspendLayout();
             this.subMenuP.SuspendLayout();
@@ -88,7 +88,7 @@
             this.LateralMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.LateralMenu.Location = new System.Drawing.Point(0, 0);
             this.LateralMenu.Name = "LateralMenu";
-            this.LateralMenu.Size = new System.Drawing.Size(281, 705);
+            this.LateralMenu.Size = new System.Drawing.Size(281, 742);
             this.LateralMenu.TabIndex = 0;
             // 
             // subMenuFinanza
@@ -454,21 +454,8 @@
             this.panelForms.Controls.Add(this.btnSalir);
             this.panelForms.Location = new System.Drawing.Point(281, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1067, 705);
+            this.panelForms.Size = new System.Drawing.Size(1105, 742);
             this.panelForms.TabIndex = 2;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSalir.Location = new System.Drawing.Point(30, 651);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(128, 34);
-            this.btnSalir.TabIndex = 13;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
@@ -481,12 +468,25 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSalir.Location = new System.Drawing.Point(35, 678);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(128, 34);
+            this.btnSalir.TabIndex = 13;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1347, 705);
+            this.ClientSize = new System.Drawing.Size(1385, 742);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.LateralMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

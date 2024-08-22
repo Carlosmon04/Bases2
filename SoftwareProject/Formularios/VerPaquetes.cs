@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using SoftwareProject.Formularios.Inventario;
+using SoftwareProject.Formularios.CRUD_Clientes;
 
 namespace SoftwareProject.Formularios
 {
@@ -126,6 +127,67 @@ namespace SoftwareProject.Formularios
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult r = MessageBox.Show("Estas Seguro que quieres eliminar el paquete" + "?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    int PaqueteID = (int)TabPaquetes.DefaultView[dataGridView1.CurrentRow.Index]["PaqueteID"];
+
+                    SqlCommand cmd = new SqlCommand("spEliminarPaquete", cnx);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@PaqueteID", PaqueteID);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Paquete Eliminado con exito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    TabPaquetes = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter("select * from dbo.TablaPaquetes()", cnx);
+                    adapter.Fill(TabPaquetes);
+                    dataGridView1.DataSource = TabPaquetes;
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.AllowUserToAddRows = false;
+                    dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dataGridView1.ScrollBars = ScrollBars.Both;
+                    
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnAgg_Click(object sender, EventArgs e)
+        {
+
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new CU_Paquetes(cnx,false));
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int PaqueteID = (int)TabPaquetes.DefaultView[dataGridView1.CurrentRow.Index]["PaqueteID"];
+            String Nombre = TabPaquetes.DefaultView[dataGridView1.CurrentRow.Index]["Nombre"].ToString();
+            float Precio = (float)Convert.ToDouble(TabPaquetes.DefaultView[dataGridView1.CurrentRow.Index]["Precio"]);
+            int Horas = (int) TabPaquetes.DefaultView[dataGridView1.CurrentRow.Index]["CantidadHoras"];
+
+
+            Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+            if (form1 != null)
+            {
+                form1.OpenChildForm(new CU_Paquetes(cnx, true,PaqueteID,Nombre,Precio,Horas));
+            }
         }
     }
 }

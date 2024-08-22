@@ -101,6 +101,12 @@
     <Compile Include="Formularios\CRUD Clientes\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\CU Paquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CU Paquetes.Designer.cs">
+      <DependentUpon>CU Paquetes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CuentasB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     <EmbeddedResource Include="Formularios\CRUD Clientes\EditarCliente.resx">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CU Paquetes.resx">
+      <DependentUpon>CU Paquetes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CuentasB.resx">
       <DependentUpon>CuentasB.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\SolicitarServicio.resx">
       <DependentUpon>SolicitarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VerPaquetes.resx">
+      <DependentUpon>VerPaquetes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerSolicitudes.resx">
       <DependentUpon>VerSolicitudes.cs</DependentUpon>

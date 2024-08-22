@@ -165,8 +165,13 @@ namespace SoftwareProject.Formularios
                 int clienteE = (int)TabSolicitudes.DefaultView[dataGridView1.CurrentRow.Index]["ClienteID"];
                 DateTime FechaInical = (DateTime)TabSolicitudes.DefaultView[dataGridView1.CurrentRow.Index]["HoraEntrada"];
 
-                EditarSoli es = new EditarSoli(cnx, clienteE,Soli);
-                es.Visible = true;
+                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                if (form1 != null)
+                {
+                    form1.OpenChildForm(new EditarSoli(cnx, clienteE,Soli));
+                }
+                
             }
 
             
