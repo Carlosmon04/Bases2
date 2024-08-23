@@ -101,6 +101,12 @@
     <Compile Include="Formularios\CRUD Clientes\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\crud Medidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\crud Medidas.Designer.cs">
+      <DependentUpon>crud Medidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CU Paquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CRUD Clientes\EditarCliente.resx">
       <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\crud Medidas.resx">
+      <DependentUpon>crud Medidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CU Paquetes.resx">
       <DependentUpon>CU Paquetes.cs</DependentUpon>

@@ -353,5 +353,11 @@ namespace SoftwareProject
             FacturasDetalle fd = new FacturasDetalle(cnx);
                 fd.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Ocultar();
+            OpenChildForm(new crud_Medidas(cnx));
+        }
     }
 }

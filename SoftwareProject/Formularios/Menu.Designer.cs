@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.LateralMenu = new System.Windows.Forms.Panel();
+            this.subMenuF = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
             this.subMenuFinanza = new System.Windows.Forms.Panel();
             this.btnActividad = new System.Windows.Forms.Button();
             this.btnCuentas = new System.Windows.Forms.Button();
@@ -55,12 +58,11 @@
             this.btnAggEmpleado = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.subMenuF = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnFacturas = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LateralMenu.SuspendLayout();
+            this.subMenuF.SuspendLayout();
             this.subMenuFinanza.SuspendLayout();
             this.subMenuP.SuspendLayout();
             this.subMenuS.SuspendLayout();
@@ -69,7 +71,6 @@
             this.subMenuEmpleado.SuspendLayout();
             this.panelForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.subMenuF.SuspendLayout();
             this.SuspendLayout();
             // 
             // LateralMenu
@@ -97,13 +98,55 @@
             this.LateralMenu.Size = new System.Drawing.Size(281, 749);
             this.LateralMenu.TabIndex = 0;
             // 
+            // subMenuF
+            // 
+            this.subMenuF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.subMenuF.Controls.Add(this.button3);
+            this.subMenuF.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subMenuF.Location = new System.Drawing.Point(0, 996);
+            this.subMenuF.Name = "subMenuF";
+            this.subMenuF.Size = new System.Drawing.Size(260, 54);
+            this.subMenuF.TabIndex = 14;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(260, 45);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Detalles";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnFacturas
+            // 
+            this.btnFacturas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFacturas.FlatAppearance.BorderSize = 0;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFacturas.Location = new System.Drawing.Point(0, 945);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnFacturas.Size = new System.Drawing.Size(260, 51);
+            this.btnFacturas.TabIndex = 15;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            // 
             // subMenuFinanza
             // 
             this.subMenuFinanza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.subMenuFinanza.Controls.Add(this.btnActividad);
             this.subMenuFinanza.Controls.Add(this.btnCuentas);
             this.subMenuFinanza.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuFinanza.Location = new System.Drawing.Point(0, 800);
+            this.subMenuFinanza.Location = new System.Drawing.Point(0, 845);
             this.subMenuFinanza.Name = "subMenuFinanza";
             this.subMenuFinanza.Size = new System.Drawing.Size(260, 100);
             this.subMenuFinanza.TabIndex = 13;
@@ -146,7 +189,7 @@
             this.btnFinanzas.FlatAppearance.BorderSize = 0;
             this.btnFinanzas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinanzas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFinanzas.Location = new System.Drawing.Point(0, 749);
+            this.btnFinanzas.Location = new System.Drawing.Point(0, 794);
             this.btnFinanzas.Name = "btnFinanzas";
             this.btnFinanzas.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnFinanzas.Size = new System.Drawing.Size(260, 51);
@@ -162,7 +205,7 @@
             this.btnComprarA.FlatAppearance.BorderSize = 0;
             this.btnComprarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprarA.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnComprarA.Location = new System.Drawing.Point(0, 698);
+            this.btnComprarA.Location = new System.Drawing.Point(0, 743);
             this.btnComprarA.Name = "btnComprarA";
             this.btnComprarA.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnComprarA.Size = new System.Drawing.Size(260, 51);
@@ -177,7 +220,7 @@
             this.subMenuP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.subMenuP.Controls.Add(this.btnInfoP);
             this.subMenuP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuP.Location = new System.Drawing.Point(0, 648);
+            this.subMenuP.Location = new System.Drawing.Point(0, 693);
             this.subMenuP.Name = "subMenuP";
             this.subMenuP.Size = new System.Drawing.Size(260, 50);
             this.subMenuP.TabIndex = 9;
@@ -204,7 +247,7 @@
             this.btnPaquetes.FlatAppearance.BorderSize = 0;
             this.btnPaquetes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaquetes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPaquetes.Location = new System.Drawing.Point(0, 597);
+            this.btnPaquetes.Location = new System.Drawing.Point(0, 642);
             this.btnPaquetes.Name = "btnPaquetes";
             this.btnPaquetes.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnPaquetes.Size = new System.Drawing.Size(260, 51);
@@ -221,7 +264,7 @@
             this.subMenuS.Controls.Add(this.button1);
             this.subMenuS.Controls.Add(this.btnAgregarS);
             this.subMenuS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuS.Location = new System.Drawing.Point(0, 456);
+            this.subMenuS.Location = new System.Drawing.Point(0, 501);
             this.subMenuS.Name = "subMenuS";
             this.subMenuS.Size = new System.Drawing.Size(260, 141);
             this.subMenuS.TabIndex = 7;
@@ -280,7 +323,7 @@
             this.btnServicios.FlatAppearance.BorderSize = 0;
             this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServicios.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnServicios.Location = new System.Drawing.Point(0, 405);
+            this.btnServicios.Location = new System.Drawing.Point(0, 450);
             this.btnServicios.Name = "btnServicios";
             this.btnServicios.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
             this.btnServicios.Size = new System.Drawing.Size(260, 51);
@@ -293,12 +336,13 @@
             // subMenuInventario
             // 
             this.subMenuInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.subMenuInventario.Controls.Add(this.button2);
             this.subMenuInventario.Controls.Add(this.btnInfoInv);
             this.subMenuInventario.Controls.Add(this.btnCompraInv);
             this.subMenuInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuInventario.Location = new System.Drawing.Point(0, 304);
             this.subMenuInventario.Name = "subMenuInventario";
-            this.subMenuInventario.Size = new System.Drawing.Size(260, 101);
+            this.subMenuInventario.Size = new System.Drawing.Size(260, 146);
             this.subMenuInventario.TabIndex = 4;
             // 
             // btnInfoInv
@@ -463,17 +507,6 @@
             this.panelForms.Size = new System.Drawing.Size(1105, 796);
             this.panelForms.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(294, 105);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(519, 467);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -487,47 +520,32 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // subMenuF
+            // button2
             // 
-            this.subMenuF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.subMenuF.Controls.Add(this.button3);
-            this.subMenuF.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuF.Location = new System.Drawing.Point(0, 951);
-            this.subMenuF.Name = "subMenuF";
-            this.subMenuF.Size = new System.Drawing.Size(260, 54);
-            this.subMenuF.TabIndex = 14;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Location = new System.Drawing.Point(0, 90);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(260, 45);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Medidas";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // pictureBox1
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(260, 45);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Detalles";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnFacturas
-            // 
-            this.btnFacturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturas.FlatAppearance.BorderSize = 0;
-            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFacturas.Location = new System.Drawing.Point(0, 900);
-            this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btnFacturas.Size = new System.Drawing.Size(260, 51);
-            this.btnFacturas.TabIndex = 15;
-            this.btnFacturas.Text = "Facturas";
-            this.btnFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturas.UseVisualStyleBackColor = true;
-            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 105);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(519, 467);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // Menu
             // 
@@ -545,6 +563,7 @@
             this.Text = "Servicio Tecnico Avanzado";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.LateralMenu.ResumeLayout(false);
+            this.subMenuF.ResumeLayout(false);
             this.subMenuFinanza.ResumeLayout(false);
             this.subMenuP.ResumeLayout(false);
             this.subMenuS.ResumeLayout(false);
@@ -553,7 +572,6 @@
             this.subMenuEmpleado.ResumeLayout(false);
             this.panelForms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.subMenuF.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -591,6 +609,7 @@
         private System.Windows.Forms.Panel subMenuF;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnFacturas;
+        private System.Windows.Forms.Button button2;
     }
 }
 

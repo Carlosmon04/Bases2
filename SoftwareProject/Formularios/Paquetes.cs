@@ -55,7 +55,7 @@ namespace SoftwareProject.Formularios
 
             if (form1 != null)
             {
-                form1.OpenChildForm(new VerPaquetes(cnx,Cliente));
+                form1.OpenChildForm(new VerPaquetes(cnx,Usuario));
             }
            
 
@@ -82,11 +82,6 @@ namespace SoftwareProject.Formularios
                                 MessageBox.Show("Este usuario ya tiene un Paquete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return; // No es necesario cerrar el reader aquí, se cierra automáticamente al salir del using
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se encontraron paquetes para este usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return; // No se encontraron paquetes, no es necesario seguir con el proceso
                         }
                     }
 
