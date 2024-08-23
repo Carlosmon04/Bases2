@@ -93,27 +93,38 @@ namespace SoftwareProject.Formularios
             try
             {
 
-            cmd = new SqlCommand("spCompraArtCliente", cnx);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ArticuloId", ArticuloID);
-            cmd.Parameters.AddWithValue("@UsuarioId", userID);
-            cmd.Parameters.AddWithValue("@precio", txtPrecioTotal.Text);
-            cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-            cmd.ExecuteNonQuery();
-
-            
-                MessageBox.Show("Muchas Gracias por su compra", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
-
-                if (form1 != null)
+                if (txtCantidad.TextLength == 0)
                 {
-                    form1.OpenChildForm(new CompraArtC(cnx, userID));
+                    MessageBox.Show("Ingrese la contidad Por favor", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    cmd = new SqlCommand("spCompraArtCliente", cnx);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ArticuloId", ArticuloID);
+                    cmd.Parameters.AddWithValue("@UsuarioId", userID);
+                    cmd.Parameters.AddWithValue("@precio", txtPrecioTotal.Text);
+                    cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                    cmd.ExecuteNonQuery();
 
+
+                    MessageBox.Show("Muchas Gracias por su compra", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+
+                    if (form1 != null)
+                    {
+                        form1.OpenChildForm(new CompraArtC(cnx, userID));
+                    }
+                }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Ocurrio un Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Number == 547)
+                {
+                    MessageBox.Show("No hay esa cantidad de articulos en existencias ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    MessageBox.Show("Ocurrio un Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

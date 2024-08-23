@@ -39,7 +39,7 @@ namespace SoftwareProject.Formularios
             {
                 ArticuloID = (int)TabInv.DefaultView[dataGridView1.CurrentRow.Index]["ArticuloID"];
                 Articulo = TabInv.DefaultView[dataGridView1.CurrentRow.Index]["Nombre"].ToString();
-                Precio = TabInv.DefaultView[dataGridView1.CurrentRow.Index]["precioBase"].ToString();
+                Precio = TabInv.DefaultView[dataGridView1.CurrentRow.Index]["precio"].ToString();
 
                 Menu form1 = Application.OpenForms.OfType<Menu>().FirstOrDefault();
 
@@ -55,18 +55,28 @@ namespace SoftwareProject.Formularios
             }
         }
 
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = txtBusqueda.Text;
+
+            string filtro = string.Format("Convert(Nombre, 'System.String') like '%{0}%'", busqueda);
+
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = filtro;
+        }
+
         private void CompraArtC_Load(object sender, EventArgs e)
         {
             try
             {
                 TabInv = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter("select * from Articulo", cnx);
+                SqlDataAdapter adapter = new SqlDataAdapter("select * from vArticulosvigentes", cnx);
                 adapter.Fill(TabInv);
                 dataGridView1.DataSource = TabInv;
                 dataGridView1.ReadOnly = true;
                 dataGridView1.AllowUserToAddRows = false;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridView1.ScrollBars = ScrollBars.Both;
+                dataGridView1.Columns["ArticuloId"].Visible = false;
             }
             catch (SqlException ex)
             {
